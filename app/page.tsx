@@ -7,7 +7,7 @@ import { Leaf, Recycle, ShieldCheck, Phone, Mail, MapPin, Menu, X, ArrowRight, S
 // --- Animation Variants ---
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
 const staggerContainer = {
@@ -353,7 +353,7 @@ const Footer = () => (
             </li>
             <li className="flex items-start gap-3">
               <Mail className="h-5 w-5 text-green-600 mt-0.5" />
-              <a href="mailto:sales@sejaraindustries.com" className="hover:text-green-500 transition">sales@sejaraindustries.com</a>
+              <a href="mailto:sales@sejaraindustries.org" className="hover:text-green-500 transition">sales@sejaraindustries.org</a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-green-600 mt-0.5" />

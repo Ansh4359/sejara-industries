@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Recycle, ShieldCheck, Phone, Mail, MapPin, Menu, X, ArrowRight, Star } from 'lucide-react';
+import { div } from 'framer-motion/client';
 
 // --- Animation Variants ---
 const fadeInUp = {
@@ -25,12 +26,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className="fixed w-full z-50 bg-stone-950/80 backdrop-blur-lg border-b border-stone-800"
     >
+     <div className="bg-yellow-500 text-stone-950 text-center py-1.5 px-4 text-xs font-bold tracking-widest uppercase">
+        Site is in Development Mode !
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="shrink-0 flex items-center gap-2 cursor-pointer">
@@ -155,7 +160,7 @@ const Hero = () => (
              <img 
                src="/images/contact.jpeg" 
                alt="Sejara Sustainable Products" 
-               className="object-cover  w-full h-full hover:scale-105 transition-transform duration-700 opacity-90"
+               className="object-cover  w-full h-full object-cover object-[10%_47%] hover:scale-105 transition-transform duration-700 opacity-90"
              />
           </div>
         </motion.div>
@@ -353,11 +358,11 @@ const Footer = () => (
             </li>
             <li className="flex items-start gap-3">
               <Mail className="h-5 w-5 text-green-600 mt-0.5" />
-              <a href="mailto:sales@sejaraindustries.org" className="hover:text-green-500 transition">sales@sejaraindustries.org</a>
+              <a href="mailto:sales@sejaraindustries.com" className="hover:text-green-500 transition">sales@sejaraindustries.com</a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-green-600 mt-0.5" />
-              <span>Greater Noida, Uttar Pradesh,<br/>India</span>
+              <span>New Delhi,<br/>India</span>
             </li>
           </ul>
         </div>
